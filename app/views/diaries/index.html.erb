@@ -1,0 +1,15 @@
+ <h1>Diaries</h1>
+ <div class="diaries">
+ <% @diaries.each do |diary| %>
+   <div class="diary">
+     <h3><%= link_to diary.title, diary_path(diary) %></h3>
+     <p><%= diary.description %></p>
+     <ul class="diary-actions">
+         <li><%= link_to "Edit", edit_diary_path(diary) %></li>
+         <li><%=  link_to "Delete", diary_path(diary), data: {
+             confirm: "Are you sure you want to delete: #{diary.title}?",
+         }, method: :delete %></li>
+     </ul>
+    </div>
+ <% end %>
+ </div>
