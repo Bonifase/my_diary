@@ -6,6 +6,6 @@ class Diary < ApplicationRecord
     validates :user, presence: true
   
     def to_s
-      name
+      title
     end
   end
