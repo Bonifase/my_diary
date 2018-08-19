@@ -1,0 +1,13 @@
+<h1><%= @diary.title %></h1>
+
+ <h2>Description:</h2>
+ <p><%= @diary.description %></p>
+   <div>
+     <ul class="diary-actions">
+         <li><%= link_to "Back", diaries_path %></li>
+         <li><%= link_to "Edit", edit_diary_path(@diary) %></li>
+         <li><%=  link_to "Delete", diary_path(@diary), data: {
+             confirm: "Are you sure you want to delete: #{@diary.title}?",
+         }, method: :delete %></li>
+     </ul>
+    </div>

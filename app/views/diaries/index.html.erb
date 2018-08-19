@@ -1,15 +1,23 @@
- <h1>Diaries</h1>
+ <div class="title-container">
+   <h1>Diaries</h1>
+   <%= link_to "New Diary", new_diary_path, class: "btn-btn-default" %>
+ </div>
+
  <div class="diaries">
  <% @diaries.each do |diary| %>
    <div class="diary">
-     <h3><%= link_to diary.title, diary_path(diary) %></h3>
-     <p><%= diary.description %></p>
-     <ul class="diary-actions">
-         <li><%= link_to "Edit", edit_diary_path(diary) %></li>
-         <li><%=  link_to "Delete", diary_path(diary), data: {
+    <div class="thumbnail">
+     <div class="caption">
+       <h3><%= link_to truncate(diary.title), diary_path(diary) %></h3>
+        <p><%= truncate(diary.description, lenth: 150) %></p>
+        <p>
+         <%= link_to "Edit", edit_diary_path(diary) %>
+         <%=  link_to "Delete", diary_path(diary), data: {
              confirm: "Are you sure you want to delete: #{diary.title}?",
-         }, method: :delete %></li>
-     </ul>
+         }, method: :delete %>
+     </p>
+     </div>
+     </div>
     </div>
  <% end %>
  </div>

@@ -10,26 +10,16 @@
         <link rel="stylesheet" href="./css/style.css">
     </head>
     <body>
-        <header>
-            <div class="container">
-                <div id="branding">
-                    <h1><span class="highlight">My Diary</span> </h1>
-                </div>
-                <nav>
-                    <ul>
-                        <li class="current"><a href="home.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-
         <section id="showcase">
             <div class="container">
                 <h1>Managing Your Diaries for You</h1>
                 <p>This is where we start. Manage your diaries effortlessly</p>
-                <button type="submit" class="button_1">Login</button>
+                 <% if signed_in? %>
+                <button type="submit" class="button_1"><%= link_to 'My Diary', diaries_path %></button>
+               <% else %>
+                <button type="submit" class="button_1"> <%= link_to 'Get Started', sign_in_path %></button>
+               <% end %>
+               
             </div>
         </section>
 
@@ -46,25 +36,21 @@
         <section id="boxes">
             <div class="container">
                 <div class="box">
-                    <img src="./img/logo_html.png">
-                    <h3>HTML5 Markup</h3>
-                    <p>Learn HTML5 Markup Language</p>
+                    <h3>Weekly Plan</h3>
+                    <p>Manange Weekly Plan</p>
                 </div>
                 <div class="box">
-                    <img src="./img/logo_css.png">
-                    <h3>CSS3 Styling</h3>
-                    <p>Learn how to style your web pages with CSS3</p>
+                    <h3>Activities</h3>
+                    <p>Keep track of your activities</p>
                 </div>
                 <div class="box">
-                    <img src="./img/logo_brush.png">
-                    <h3>Graphic Design</h3>
-                    <p>Learn Graphic Design and become a pro</p>
+
+                    <h3>Pending Items</h3>
+                    <p>Keep track of pending activities</p>
                 </div>
             </div>
         </section>
 
-        <footer>
-            <p>My Diaries, Copyright &copy; 2018</p>
-        </footer>
+       
     </body>
 </html>
