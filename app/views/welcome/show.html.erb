@@ -17,7 +17,7 @@
                  <% if signed_in? %>
                 <button type="submit" class="button_1"><%= link_to 'My Diary', diaries_path %></button>
                <% else %>
-                <button type="submit" class="button_1"> <%= link_to 'Get Started', sign_in_path %></button>
+                <button type="submit" class="button_1"> <%= link_to 'Get Started', sign_in_path, class: "button_1" %></button>
                <% end %>
                
             </div>

@@ -224,3 +224,11 @@ ul#services li {
         margin-bottom: 5px;
     }
 }
+
+#form_login {
+    text-align: center;
+    vertical-align: middle;
+    display: table;
+    /* shrinks to fit content */
+    margin: auto;
+}
