@@ -8,6 +8,6 @@ class CreateDiaries < ActiveRecord::Migration[5.2]
       t.timestamps null: false
     end
 
-    add_index :diaries, [:user_id, :name]
+    add_index :diaries, [:user_id, :title]
   end
 end

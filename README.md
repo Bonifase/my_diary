@@ -1,8 +1,10 @@
+[![Maintainability](https://api.codeclimate.com/v1/badges/496b55ba23fd74c89ec4/maintainability)](https://codeclimate.com/github/Bonifase/my_diary/maintainability)
+
 # My Diary
 
 This app is used for keeping my diary.
 
-Things you may want to cover:
+# Things you may want to cover:
 
 - Ruby version
 
@@ -20,4 +22,6 @@ Things you may want to cover:
 
 - Deployment instructions
 
-- ...
+## Meta
+
+Author: [Bonifase](https://twitter.com/BonifaseOrwa?lang=en)
